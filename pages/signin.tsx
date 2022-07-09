@@ -11,7 +11,8 @@ const Home: NextPage = () => {
 
   if(loading) return null
 
-  if(user) return <h1>U already logged</h1>
+  console.log(user)
+  if(user) return <h1>{user.claims.email} already logged</h1>
 
   const auth=getAuth()
 

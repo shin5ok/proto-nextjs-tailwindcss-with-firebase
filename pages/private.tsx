@@ -5,8 +5,10 @@ import { useAuth } from '../lib/authContext'
 const Home: NextPage = () => {
   const { user, loading} = useAuth()
 
+  // ローディングの文字
   if(loading) return <h1>Loading...</h1>
 
+  // ログインが必要
   if(!user) return <h1>U need to login</h1>
 
   return (
